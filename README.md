@@ -1,5 +1,10 @@
 # Gama Travel & Tour Agency: website redesign prototype
 
+**v2 (pitch edition):** cinematic hero with a welcome intro, an interactive map of Rwanda's destinations,
+a swipeable signature-journeys rail, a three-step trip builder that matches tours live and pre-fills the
+enquiry, a services bento, gallery lightbox and a new visual identity built on topographic contour lines
+("a thousand hills"). Fonts: Fraunces, Hanken Grotesk, JetBrains Mono (Google Fonts).
+
 A three-page concept for https://www.gamatour.agency/, built to show the agency what a modern,
 conversion-focused site could look like. Static HTML, CSS and vanilla JavaScript: no build step,
 no dependencies, no API keys.
@@ -7,7 +12,7 @@ no dependencies, no API keys.
 ## Pages
 | File | Page |
 | --- | --- |
-| `index.html` | Homepage: hero, trip finder, about, destination index, featured tours, services, why Gama, gallery, trip-planning form |
+| `index.html` | Homepage: hero, who we are, interactive destinations map, journeys rail, trip builder, services, why Gama, gallery, trip-planning form |
 | `tours.html` | Tours & destinations: all 14 published tours with style chips and length filter (shareable via URL hash, e.g. `tours.html#primates--short`) |
 | `tour.html#<slug>` | Tour detail: facts bar, overview, highlights, day-by-day itinerary, gallery, good-to-know, sticky enquiry card, enquiry form, related tours. Default: `#volcanoes-gorillas` |
 
@@ -30,7 +35,8 @@ css/styles.css                      design tokens + all components (light & dark
 js/data.js                          tour catalogue + verified company details (single source of truth)
 js/scenes.js                        illustrated image fallbacks
 js/site.js                          header, mobile menu, image loading, tour cards, form validation
-js/home.js, tours-page.js, tour-page.js   page-specific behaviour
+js/home.js                          homepage: map, rail, trip builder, lightbox, scroll effects
+js/tours-page.js, tour-page.js      tours list filters and tour detail rendering
 ```
 To add or edit a tour, change `js/data.js`; cards, filters and detail pages update automatically.
 

@@ -1,443 +1,473 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Gama Travel & Tour Agency · Tours in Rwanda & East Africa</title>
-<meta name="claude:viewport-fit-sides" content="cover">
-<meta name="description" content="Gorilla trekking, safaris, lake escapes, group tours and night camping across Rwanda and East Africa, planned by a Kigali-based, RDB-licensed team. Flights and visa support included.">
-<meta property="og:title" content="Gama Travel & Tour Agency · Tours in Rwanda & East Africa">
-<meta property="og:description" content="Gorilla trekking, safaris, lake escapes, group tours and night camping across Rwanda and East Africa, planned by a Kigali-based, RDB-licensed team. Flights and visa support included.">
-<meta property="og:type" content="website">
-<meta name="theme-color" content="#14211B">
-<link rel="canonical" href="https://www.gamatour.agency/">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gloock&family=IBM+Plex+Mono:wght@400;500&family=Schibsted+Grotesk:ital,wght@0,400;0,500;0,600;1,400&display=swap">
-<link rel="stylesheet" href="css/styles.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Gama Travel & Tour Agency · Rwanda & East Africa, from people who live here</title>
+  <meta name="description" content="Gorilla trekking, safaris, lake escapes, group tours and night camping across Rwanda and East Africa, planned by a Kigali-based, RDB-licensed team. Flights and visa support included.">
+  <meta property="og:title" content="Gama Travel & Tour Agency · Rwanda & East Africa">
+  <meta property="og:description" content="Gorillas, volcanoes, savannah and lake. Journeys planned by a Kigali team, from home to anywhere.">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#0D1310">
+  <link rel="canonical" href="https://www.gamatour.agency/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
+  <link rel="stylesheet" href="css/styles.css">
+  <script>
+    /* Play the welcome curtain once per visit, and never for reduced-motion users. */
+    try { if (sessionStorage.getItem("gama-intro") || matchMedia("(prefers-reduced-motion: reduce)").matches) document.documentElement.classList.add("no-intro"); sessionStorage.setItem("gama-intro", "1"); } catch (e) { document.documentElement.classList.add("no-intro"); }
+  </script>
 </head>
 <body class="home-page">
-<a class="skip-link" href="#main">Skip to content</a>
-<header class="site-header">
-  <div class="wrap">
-    <a class="brand" href="index.html" aria-label="Gama Travel &amp; Tour Agency, home">
-      <span class="brand__name">Gama</span>
-      <span class="brand__sub">Travel &amp; Tour Agency</span>
-    </a>
-    <nav class="nav" aria-label="Main">
-      <a href="index.html" aria-current="page">Home</a>
-      <a href="tours.html">Tours &amp; destinations</a>
-      <a href="index.html#services">Services</a>
-      <a href="index.html#why">Why Gama</a>
-      <a href="index.html#plan">Contact</a>
-    </nav>
-    <div class="header-cta">
-      <a class="header-phone" href="tel:+250780367697">+250 780 367 697</a>
-      <a class="btn btn--small" href="index.html#plan">Plan your trip</a>
-      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu"><span></span><span class="visually-hidden">Menu</span></button>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <div class="intro-curtain" aria-hidden="true">
+    <div class="intro-curtain__inner">
+      <span class="intro-curtain__word">Murakaza neza</span>
+      <span class="intro-curtain__sub">Welcome to Rwanda</span>
     </div>
   </div>
-</header>
-<div class="mobile-menu" id="mobile-menu" hidden>
-  <div class="wrap">
+
+  <header class="site-header">
+    <div class="site-header__bar">
+      <a class="brand" href="index.html" aria-label="Gama Travel &amp; Tour Agency, home">
+        <svg class="brand__mark" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="19" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M6 27c4-2 7-8 11-8s5 4 8 4 5-6 9-6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><path d="M8 31c4-1.5 7-4 11-4s6 2 9 2 4-2 6-3" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" opacity=".55"/><circle cx="26" cy="12" r="3" fill="currentColor"/></svg>
+        <span class="brand__text"><span class="brand__name">Gama</span><span class="brand__sub">Travel &amp; Tour Agency</span></span>
+      </a>
+      <nav class="nav" aria-label="Main">
+        <a href="tours.html">Journeys</a>
+        <a href="#map">Destinations</a>
+        <a href="#builder">Trip builder</a>
+        <a href="#services">Services</a>
+        <a href="#plan">Contact</a>
+      </nav>
+      <div class="header-cta">
+        <a class="header-wa" href="https://wa.me/250780367697" target="_blank" rel="noopener" aria-label="WhatsApp Gama">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a9 9 0 0 0-7.8 13.5L3 21l4.6-1.2A9 9 0 1 0 12 3Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M8.8 8.3c.2-.4.5-.4.7-.4h.5c.2 0 .4 0 .5.4l.7 1.6c.1.2 0 .4-.1.6l-.5.6c-.1.1-.2.3 0 .5.4.7 1.4 1.8 2.6 2.3.2.1.4.1.5-.1l.6-.7c.2-.2.4-.2.6-.1l1.5.7c.3.1.4.3.3.5 0 .5-.3 1.3-1 1.5-.6.3-1.8.3-3.6-.6-2.1-1.1-3.4-3.3-3.6-3.8-.3-.6-.4-1.6.3-2.5Z" fill="currentColor"/></svg>
+        </a>
+        <a class="btn btn--gold btn--small" href="#plan">Plan your trip</a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu"><span></span><span class="visually-hidden">Menu</span></button>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobile-menu" id="mobile-menu" hidden>
     <nav aria-label="Mobile">
-      <a href="index.html">Home</a>
-      <a href="tours.html">Tours &amp; destinations</a>
-      <a href="index.html#services">Services</a>
-      <a href="index.html#why">Why Gama</a>
-      <a href="index.html#plan">Contact</a>
+      <a href="tours.html"><span>01</span>Journeys</a>
+      <a href="#map"><span>02</span>Destinations</a>
+      <a href="#builder"><span>03</span>Trip builder</a>
+      <a href="#services"><span>04</span>Services</a>
+      <a href="#plan"><span>05</span>Contact</a>
     </nav>
     <div class="mobile-menu__foot">
-      <a class="btn" href="index.html#plan">Plan your trip</a>
-      <p>Call or WhatsApp: +250 780 367 697 · +250 788 872 060</p>
-      <p>ININDI House, 3rd Floor, Sonatube, Kicukiro, Kigali</p>
+      <a class="btn btn--gold" href="#plan">Plan your trip</a>
+      <p>Call or WhatsApp<br><a href="tel:+250780367697">+250 780 367 697</a> · <a href="tel:+250788872060">+250 788 872 060</a></p>
     </div>
   </div>
-</div>
 
-<main id="main">
-  <section class="hero" aria-labelledby="hero-title">
-    <figure class="media " data-scene="volcano" data-seed="11"><img src="https://www.gamatour.agency/wp-content/uploads/2025/08/WhatsApp-Image-2025-08-14-at-8.25.55-AM.jpeg" alt="Travellers on a Gama tour in Rwanda" fetchpriority="high" decoding="async"></figure>
-    <div class="wrap hero__inner">
-      <p class="eyebrow eyebrow--light hero__kicker">Murakaza neza · Welcome to Rwanda</p>
-      <h1 id="hero-title">Discover Rwanda and East Africa <em>with heart.</em></h1>
-      <p class="hero__text">Gama is a Kigali-based travel and tour agency. We plan gorilla treks, safaris, lake escapes, group tours and night camping, and we handle the flights and visas that get you there.</p>
-      <div class="hero__actions">
-        <a class="btn" href="tours.html">Explore our tours</a>
-        <a class="btn btn--ghost" href="#plan">Plan your trip</a>
-      </div>
-    </div>
-    <p class="hero__caption">Photo · Gama Travel &amp; Tour Agency</p>
-  </section>
+  <main id="main">
 
-  <div class="finder-wrap">
-    <form class="wrap finder" id="finder" aria-label="Find a journey">
-      <p class="finder__title">Find your journey</p>
-      <div>
-        <label for="finder-style">Travel style</label>
-        <select class="select-dark" id="finder-style" name="style" data-fill="categories"></select>
+    <!-- ============ HERO ============ -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero__media">
+        <figure class="media" data-scene="volcano" data-seed="11"><img src="https://www.gamatour.agency/wp-content/uploads/2025/08/WhatsApp-Image-2025-08-14-at-8.25.55-AM.jpeg" alt="Travellers on a Gama tour in Rwanda" fetchpriority="high" decoding="async"></figure>
       </div>
-      <div>
-        <label for="finder-length">Trip length</label>
-        <select class="select-dark" id="finder-length" name="length" data-fill="durations"></select>
-      </div>
-      <button class="btn" type="submit">Show journeys</button>
-      <p class="finder__foot">Have something else in mind? <a href="#plan">Tell us and we'll plan it with you.</a></p>
-    </form>
-  </div>
+      <svg class="hero__contours" aria-hidden="true" data-contours="14"></svg>
 
-  <section class="section" aria-labelledby="intro-title">
-    <div class="wrap intro">
-      <div class="reveal">
-        <p class="eyebrow" id="intro-title">Who we are</p>
-        <p class="intro__statement" style="margin-top:18px">A Rwandan team planning journeys across East Africa, <span>from home to anywhere.</span></p>
-      </div>
-      <div class="intro__body reveal">
-        <p>Gama Travel &amp; Tour Agency is based in Kigali and works across Rwanda and its neighbours. The name Gama stands for strength, unity and movement. The team's approach is community-first: journeys rooted in local knowledge, cultural immersion and responsible tourism.</p>
-        <p>Every Gama journey is planned to support local communities and to help protect the natural and cultural heritage that travellers come to see.</p>
-        <dl class="ledger">
-          <div><dt>Office</dt><dd>ININDI House, 3rd Floor, Sonatube, Kicukiro, Kigali</dd></div>
-          <div><dt>Licence</dt><dd>Rwanda Development Board · <a href="https://tourismregulation.rw/en/entity/profile/2081/" target="_blank" rel="noopener">View register</a></dd></div>
-          <div><dt>Listed on</dt><dd>SafariBookings · <a href="https://www.safaribookings.com/p8043" target="_blank" rel="noopener">View profile</a></dd></div>
-          <div><dt>Travels to</dt><dd>Rwanda, Uganda, Kenya, Tanzania, Burundi</dd></div>
-          <div><dt>Hours</dt><dd>Office Mon–Fri, 9:00–17:00 · online enquiries any time</dd></div>
-        </dl>
-      </div>
-    </div>
-  </section>
-
-  <div class="imigongo" role="presentation"></div>
-
-  <section class="section on-dark" id="destinations" aria-labelledby="dest-title">
-    <div class="wrap">
-      <div class="section-head">
-        <div class="section-head__text">
-          <p class="eyebrow">Where we travel</p>
-          <h2 id="dest-title">Rainforest, volcanoes, savannah and lake, all within a day of Kigali.</h2>
-        </div>
-        <p class="lead">Rwanda is small enough to see a great deal of it in one trip. When you're ready to go further, Gama's cross-border itineraries continue into the rest of East Africa.</p>
-      </div>
-      <div class="destinations">
-        <ul class="dest-list">
-          <li class="dest-item is-active" data-dest="volcanoes">
-          <a href="tours.html#primates">
-            <figure class="media dest-item__thumb" data-scene="volcano" data-seed="11"><img src="https://www.gamatour.agency/wp-content/uploads/2025/08/rwanda-gorilla-tours-750x450-1.jpg" alt="" loading="lazy" decoding="async"></figure>
-            <span class="dest-item__name">Volcanoes National Park</span>
-            <span class="dest-item__meta">North · ≈2.5 h</span>
-            <span class="dest-item__desc">Mountain gorillas, golden monkeys and the Virunga volcano chain.</span>
-          </a>
-        </li>
-<li class="dest-item" data-dest="nyungwe">
-          <a href="tour.html#nyungwe-3-day">
-            <figure class="media dest-item__thumb" data-scene="forest" data-seed="3"><img src="https://www.gamatour.agency/wp-content/uploads/2026/01/canopy-walk-nyungwe-750x450-1.jpeg" alt="" loading="lazy" decoding="async"></figure>
-            <span class="dest-item__name">Nyungwe Forest</span>
-            <span class="dest-item__meta">Southwest · ≈5 h</span>
-            <span class="dest-item__desc">Chimpanzees, 300+ bird species and a canopy walkway 60 m above the forest floor.</span>
-          </a>
-        </li>
-<li class="dest-item" data-dest="akagera">
-          <a href="tours.html#wildlife">
-            <figure class="media dest-item__thumb" data-scene="savanna" data-seed="7"><img src="https://www.gamatour.agency/wp-content/uploads/2025/08/akagera-rwanda-1-1024x524.jpg" alt="" loading="lazy" decoding="async"></figure>
-            <span class="dest-item__name">Akagera National Park</span>
-            <span class="dest-item__meta">East · ≈2.5 h</span>
-            <span class="dest-item__desc">Rwanda's savannah park, and its Big Five country.</span>
-          </a>
-        </li>
-<li class="dest-item" data-dest="kivu">
-          <a href="tour.html#lake-kivu-escape">
-            <figure class="media dest-item__thumb" data-scene="lake" data-seed="5"><img src="https://www.gamatour.agency/wp-content/uploads/2025/08/Rwanda-Congo-Nile-Trail-Lake-Kivu-1024x576.webp" alt="" loading="lazy" decoding="async"></figure>
-            <span class="dest-item__name">Lake Kivu</span>
-            <span class="dest-item__meta">West · ≈3 h</span>
-            <span class="dest-item__desc">Island boat trips, hot springs and long lakeside sunsets.</span>
-          </a>
-        </li>
-<li class="dest-item" data-dest="twin">
-          <a href="tour.html#twin-lakes-burera-ruhondo">
-            <figure class="media dest-item__thumb" data-scene="lake" data-seed="9"><img src="https://www.gamatour.agency/wp-content/uploads/2026/03/Twin-lakes-of-Burera-and-Ruhondo-2.jpg" alt="" loading="lazy" decoding="async"></figure>
-            <span class="dest-item__name">Burera &amp; Ruhondo</span>
-            <span class="dest-item__meta">North · ≈2.5 h</span>
-            <span class="dest-item__desc">Twin lakes, grey crowned cranes and volcano views.</span>
-          </a>
-        </li>
-<li class="dest-item" data-dest="kigali">
-          <a href="tour.html#kigali-city-tour">
-            <figure class="media dest-item__thumb" data-scene="city" data-seed="2"><img src="https://www.gamatour.agency/wp-content/uploads/2026/05/Rwanda_upscayl_4x_realesrgan-x4plus-1024x576.png" alt="" loading="lazy" decoding="async"></figure>
-            <span class="dest-item__name">Kigali</span>
-            <span class="dest-item__meta">Centre · start here</span>
-            <span class="dest-item__desc">Memorials, museums, eco-parks and the city after dark.</span>
-          </a>
-        </li>
-<li class="dest-item" data-dest="beyond">
-          <a href="tours.html#crossborder">
-            <figure class="media dest-item__thumb" data-scene="savanna" data-seed="21"><img src="https://www.gamatour.agency/wp-content/uploads/2026/01/The-Majestic-Murchison-Falls-in-Uganda-1024x576.jpg" alt="" loading="lazy" decoding="async"></figure>
-            <span class="dest-item__name">Beyond Rwanda</span>
-            <span class="dest-item__meta">Uganda · Kenya · Tanzania · Burundi</span>
-            <span class="dest-item__desc">Cross-border itineraries, including gorilla trekking in Bwindi.</span>
-          </a>
-        </li>
-        </ul>
-        <div class="dest-stage" aria-hidden="true">
-          <div class="dest-stage__frame">
-            <figure class="media is-active" data-dest="volcanoes" data-scene="volcano" data-seed="11"><img src="https://www.gamatour.agency/wp-content/uploads/2025/08/rwanda-gorilla-tours-750x450-1.jpg" alt="Mountain gorilla in Volcanoes National Park" loading="lazy" decoding="async"></figure>
-<figure class="media " data-dest="nyungwe" data-scene="forest" data-seed="3"><img src="https://www.gamatour.agency/wp-content/uploads/2026/01/canopy-walk-nyungwe-750x450-1.jpeg" alt="Canopy walkway in Nyungwe Forest" loading="lazy" decoding="async"></figure>
-<figure class="media " data-dest="akagera" data-scene="savanna" data-seed="7"><img src="https://www.gamatour.agency/wp-content/uploads/2025/08/akagera-rwanda-1-1024x524.jpg" alt="Savannah plains of Akagera National Park" loading="lazy" decoding="async"></figure>
-<figure class="media " data-dest="kivu" data-scene="lake" data-seed="5"><img src="https://www.gamatour.agency/wp-content/uploads/2025/08/Rwanda-Congo-Nile-Trail-Lake-Kivu-1024x576.webp" alt="Lake Kivu shoreline" loading="lazy" decoding="async"></figure>
-<figure class="media " data-dest="twin" data-scene="lake" data-seed="9"><img src="https://www.gamatour.agency/wp-content/uploads/2026/03/Twin-lakes-of-Burera-and-Ruhondo-2.jpg" alt="Lakes Burera and Ruhondo" loading="lazy" decoding="async"></figure>
-<figure class="media " data-dest="kigali" data-scene="city" data-seed="2"><img src="https://www.gamatour.agency/wp-content/uploads/2026/05/Rwanda_upscayl_4x_realesrgan-x4plus-1024x576.png" alt="Kigali city view" loading="lazy" decoding="async"></figure>
-<figure class="media " data-dest="beyond" data-scene="savanna" data-seed="21"><img src="https://www.gamatour.agency/wp-content/uploads/2026/01/The-Majestic-Murchison-Falls-in-Uganda-1024x576.jpg" alt="Murchison Falls in Uganda" loading="lazy" decoding="async"></figure>
-          </div>
-          <p class="dest-stage__note">Road times are approximate, from central Kigali</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section" aria-labelledby="featured-title">
-    <div class="wrap">
-      <div class="section-head">
-        <div class="section-head__text">
-          <p class="eyebrow">Featured journeys</p>
-          <h2 id="featured-title">Start with the classics.</h2>
-        </div>
-        <a class="link-arrow" href="tours.html" data-count-link>See all journeys</a>
-      </div>
-      <div class="featured" id="featured" data-featured="volcanoes-gorillas,tembera-u-rwanda-7-day,akagera-classic-safari,nyungwe-3-day"></div>
-    </div>
-  </section>
-
-  <section class="section" id="services" aria-labelledby="services-title" style="padding-top:0">
-    <div class="wrap">
-      <div class="section-head">
-        <div class="section-head__text">
-          <p class="eyebrow">More than tours</p>
-          <h2 id="services-title">One desk for the whole trip.</h2>
-        </div>
-        <p class="lead">Flights, visas, group logistics and the tour itself, all arranged by the same Kigali team.</p>
-      </div>
-      <div class="services">
-        <article class="service">
-          <svg viewBox="0 0 24 24" aria-hidden="true" stroke-linecap="round" stroke-linejoin="round"><path d="M3 13.5 21 6l-6.5 14-3.2-5.3L3 13.5Z"/><path d="M11.3 14.7 21 6"/></svg>
-          <h3>Air ticketing</h3>
-          <p>Domestic and international flights, booked to match your tour dates.</p>
-          <button type="button" data-interest="Air ticketing">Ask about air ticketing</button>
-        </article>
-<article class="service">
-          <svg viewBox="0 0 24 24" aria-hidden="true" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2.5" width="14" height="19" rx="1.2"/><circle cx="12" cy="10" r="3.2"/><path d="M8.5 17h7"/></svg>
-          <h3>Visa assistance</h3>
-          <p>Guidance and support with visa applications for Rwanda and the region.</p>
-          <button type="button" data-interest="Visa assistance">Ask about visa assistance</button>
-        </article>
-<article class="service">
-          <svg viewBox="0 0 24 24" aria-hidden="true" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="8" r="3"/><circle cx="16.5" cy="9" r="2.4"/><path d="M2.5 20c0-3.4 2.5-5.8 5.5-5.8s5.5 2.4 5.5 5.8"/><path d="M14 20c0-2.7 1.4-4.8 3.6-4.8S21.5 17.3 21.5 20"/></svg>
-          <h3>Group tours</h3>
-          <p>Programmes for schools, families and organisations, from day trips to full itineraries.</p>
-          <button type="button" data-interest="Group tour">Ask about group tours</button>
-        </article>
-<article class="service">
-          <svg viewBox="0 0 24 24" aria-hidden="true" stroke-linecap="round" stroke-linejoin="round"><path d="M2 20.5h20"/><path d="M12 4 3.5 20.5"/><path d="m12 4 8.5 16.5"/><path d="m9 20.5 3-6 3 6"/><path d="M10.6 2.5 12 4l1.4-1.5"/></svg>
-          <h3>Night camping</h3>
-          <p>Camping nights at scenic spots across Rwanda, in the district you choose.</p>
-          <button type="button" data-interest="Night camping">Ask about night camping</button>
-        </article>
-<article class="service">
-          <svg viewBox="0 0 24 24" aria-hidden="true" stroke-linecap="round" stroke-linejoin="round"><circle cx="5" cy="18.5" r="2.2"/><circle cx="19" cy="5.5" r="2.2"/><path d="M7.2 18.5H14a3.2 3.2 0 0 0 0-6.4h-4a3.2 3.2 0 0 1 0-6.4h6.8" stroke-dasharray="2.2 2.2"/></svg>
-          <h3>Cross-border tours</h3>
-          <p>Itineraries that continue into Uganda, Kenya, Burundi and Tanzania.</p>
-          <button type="button" data-interest="Cross-border tour">Ask about cross-border tours</button>
-        </article>
-<article class="service">
-          <svg viewBox="0 0 24 24" aria-hidden="true" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9.2"/><path d="m15.8 8.2-2.4 5.2-5.2 2.4 2.4-5.2 5.2-2.4Z"/></svg>
-          <h3>Custom trip planning</h3>
-          <p>Share your dates, budget and interests, and we'll design the trip around you.</p>
-          <button type="button" data-interest="Custom trip">Ask about custom trip planning</button>
-        </article>
-      </div>
-      <p class="muted" style="margin-top:20px;font-size:.95rem">Gama also runs international academic tours and language &amp; tourism training programmes.</p>
-    </div>
-  </section>
-
-  <section class="section" id="why" aria-labelledby="why-title" style="background:var(--paper)">
-    <div class="wrap">
-      <div class="why">
-        <figure class="why__photo reveal">
-          <figure class="media " data-scene="hills" data-seed="41"><img src="https://www.gamatour.agency/wp-content/uploads/2025/08/WhatsApp-Image-2025-08-02-at-12.59.12-AM.jpeg" alt="Gama guides and travellers on tour" loading="lazy" decoding="async"></figure>
-          <figcaption>On tour with Gama · photo from the agency's gallery</figcaption>
-        </figure>
-        <div class="reveal">
-          <p class="eyebrow">Why travel with Gama</p>
-          <h2 id="why-title" style="font-size:var(--t-h2);margin-top:16px">Local people, local knowledge.</h2>
-          <ul class="why__list">
-            <li><svg viewBox="0 0 24 24" aria-hidden="true" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-11.5a7 7 0 1 1 14 0C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></svg><div><h3>Based in Kigali</h3><p>A real office at ININDI House in Sonatube, Kicukiro, and a team of locally trained tourism professionals.</p></div></li>
-            <li><svg viewBox="0 0 24 24" aria-hidden="true" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.8 4.5 5.6v6c0 4.6 3.2 8 7.5 9.6 4.3-1.6 7.5-5 7.5-9.6v-6L12 2.8Z"/><path d="m8.8 12 2.3 2.3 4.3-4.6"/></svg><div><h3>Licensed by the Rwanda Development Board</h3><p>Registered with RDB tourism regulation and listed on SafariBookings, so you can check before you book.</p></div></li>
-            <li><svg viewBox="0 0 24 24" aria-hidden="true" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="12" rx="1.2"/><path d="M8 20h8M12 16v4"/></svg><div><h3>Flights, visas and tours together</h3><p>One point of contact from the first enquiry to the drive home.</p></div></li>
-            <li><svg viewBox="0 0 24 24" aria-hidden="true" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="8" r="3"/><circle cx="16.5" cy="9" r="2.4"/><path d="M2.5 20c0-3.4 2.5-5.8 5.5-5.8s5.5 2.4 5.5 5.8"/><path d="M14 20c0-2.7 1.4-4.8 3.6-4.8S21.5 17.3 21.5 20"/></svg><div><h3>Trips for every kind of group</h3><p>Solo travellers, couples, families, schools, churches and companies.</p></div></li>
-          </ul>
-          <div class="values" aria-label="Gama's core values">
-            <span>Community</span><span>Reliability</span><span>Empowerment</span><span>Sustainability</span><span>Excellence</span>
+      <div class="hero__inner">
+        <p class="hero__kicker"><span class="dot"></span>Kigali, Rwanda · <span data-kigali-time>--:--</span> local time</p>
+        <h1 id="hero-title" class="hero__title">
+          <span class="line"><span>Rwanda,</span></span>
+          <span class="line"><span>by the people</span></span>
+          <span class="line"><span><em>who call it home.</em></span></span>
+        </h1>
+        <div class="hero__row">
+          <p class="hero__text">Walk with mountain gorillas, cross Nyungwe's canopy, chase the Big Five in Akagera and slow down on Lake Kivu. A Kigali team plans every step, flights and visas included.</p>
+          <div class="hero__actions">
+            <a class="btn btn--gold btn--lg" href="#builder">Build my trip <span class="btn__arrow" aria-hidden="true">→</span></a>
+            <a class="btn btn--glass btn--lg" href="tours.html">See all journeys</a>
           </div>
         </div>
       </div>
-      <aside class="reviews-slot" aria-label="Traveller reviews (placeholder)">
+
+      <div class="hero__rotator" aria-hidden="true">
+        <span class="hero__rotator-label">Now showing</span>
+        <span class="hero__rotator-word" data-rotate="Volcanoes|Rainforest|Savannah|Lake Kivu|Kigali">Volcanoes</span>
+      </div>
+
+      <a class="hero__scroll" href="#manifesto" aria-label="Scroll to the story">
+        <span>Scroll</span>
+      </a>
+    </section>
+
+    <!-- ============ MARQUEE ============ -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <span>Gorilla trekking</span><b>✦</b><span>Canopy walks</span><b>✦</b><span>Big Five safaris</span><b>✦</b><span>Lake Kivu</span><b>✦</b><span>Night camping</span><b>✦</b><span>Kigali culture</span><b>✦</b><span>Golden monkeys</span><b>✦</b><span>Beyond Rwanda</span><b>✦</b>
+        <span>Gorilla trekking</span><b>✦</b><span>Canopy walks</span><b>✦</b><span>Big Five safaris</span><b>✦</b><span>Lake Kivu</span><b>✦</b><span>Night camping</span><b>✦</b><span>Kigali culture</span><b>✦</b><span>Golden monkeys</span><b>✦</b><span>Beyond Rwanda</span><b>✦</b>
+      </div>
+    </div>
+
+    <!-- ============ MANIFESTO ============ -->
+    <section class="manifesto" id="manifesto" aria-labelledby="manifesto-title">
+      <div class="wrap manifesto__grid">
+        <p class="label" id="manifesto-title"><span>01</span>Who we are</p>
         <div>
-          <span class="placeholder-tag">Placeholder</span>
-          <h3>What travellers say</h3>
+          <p class="manifesto__text" data-scrub>Gama means strength, unity and movement. We are a Rwandan team in Kigali, planning journeys rooted in local knowledge and cultural immersion, so every trip leaves something good behind. From home to anywhere.</p>
+          <dl class="credentials">
+            <div><dt>Licensed</dt><dd>Rwanda Development Board<a href="https://tourismregulation.rw/en/entity/profile/2081/" target="_blank" rel="noopener">Check the register ↗</a></dd></div>
+            <div><dt>Listed</dt><dd>SafariBookings<a href="https://www.safaribookings.com/p8043" target="_blank" rel="noopener">View our profile ↗</a></dd></div>
+            <div><dt>Based</dt><dd>ININDI House, 3rd floor<span>Sonatube, Kicukiro, Kigali</span></dd></div>
+            <div><dt>Travel to</dt><dd>5 countries<span>Rwanda, Uganda, Kenya, Tanzania, Burundi</span></dd></div>
+          </dl>
         </div>
-        <p>Verified reviews from Gama's SafariBookings and Google profiles will appear here, with the reviewer's name, trip and date. They will be pulled from the review platform, not written into the site.</p>
-      </aside>
-    </div>
-  </section>
+      </div>
+    </section>
 
-  <section class="section on-dark" aria-labelledby="gallery-title">
+    <!-- ============ MAP ============ -->
+    <section class="atlas on-dark" id="map" aria-labelledby="atlas-title">
+      <svg class="atlas__contours" aria-hidden="true" data-contours="22"></svg>
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <p class="label"><span>02</span>Destinations</p>
+            <h2 id="atlas-title">Five worlds, <em>one small country.</em></h2>
+          </div>
+          <p class="lead">Rainforest, volcanoes, savannah and lake all sit within a day's drive of Kigali. Pick a place on the map to see what's there and how long it takes to reach.</p>
+        </div>
+
+        <div class="atlas__grid">
+          <div class="atlas__map">
+            <svg id="rwanda-map" viewBox="0 0 640 580" role="group" aria-label="Map of Rwanda with Gama destinations"></svg>
+            <p class="atlas__note">Stylised map · road times approximate, from central Kigali</p>
+          </div>
+          <div class="atlas__panel" id="atlas-panel" aria-live="polite"></div>
+        </div>
+        <div class="atlas__tabs" id="atlas-tabs" role="tablist" aria-label="Destinations"></div>
+      </div>
+    </section>
+
+    <!-- ============ JOURNEYS RAIL ============ -->
+    <section class="journeys" aria-labelledby="journeys-title">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <p class="label"><span>03</span>Signature journeys</p>
+            <h2 id="journeys-title">Start with the <em>classics.</em></h2>
+          </div>
+          <div class="rail-controls">
+            <a class="link-arrow" href="tours.html" data-count-link>See all journeys</a>
+            <button class="round-btn" type="button" data-rail="prev" aria-label="Previous journeys">←</button>
+            <button class="round-btn" type="button" data-rail="next" aria-label="Next journeys">→</button>
+          </div>
+        </div>
+      </div>
+      <div class="rail" id="rail" data-featured="volcanoes-gorillas,tembera-u-rwanda-7-day,akagera-classic-safari,nyungwe-3-day,lake-kivu-escape,western-uganda-5-day,kigali-city-tour,twin-lakes-burera-ruhondo" tabindex="0" aria-label="Signature journeys, scroll sideways"></div>
+      <div class="wrap"><div class="rail-progress"><span id="rail-bar"></span></div></div>
+    </section>
+
+    <!-- ============ TRIP BUILDER ============ -->
+    <section class="builder" id="builder" aria-labelledby="builder-title">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <p class="label"><span>04</span>Trip builder</p>
+            <h2 id="builder-title">Your Rwanda, <em>in three taps.</em></h2>
+          </div>
+          <p class="lead">Tell us what pulls you here. We'll match you with Gama journeys right now, and send the shortlist to a trip planner when you're ready.</p>
+        </div>
+
+        <div class="builder__card">
+          <form class="builder__form" id="builder-form" aria-describedby="builder-hint">
+            <fieldset class="step">
+              <legend><b>1</b>What draws you?<small>Pick as many as you like</small></legend>
+              <div class="pick" data-group="interests">
+                <label><input type="checkbox" value="primates"><span>Gorillas &amp; primates</span></label>
+                <label><input type="checkbox" value="wildlife"><span>Safari &amp; wildlife</span></label>
+                <label><input type="checkbox" value="lakes"><span>Lakes &amp; nature</span></label>
+                <label><input type="checkbox" value="culture"><span>Culture &amp; city</span></label>
+                <label><input type="checkbox" value="groups"><span>Groups &amp; camping</span></label>
+                <label><input type="checkbox" value="crossborder"><span>Beyond Rwanda</span></label>
+              </div>
+            </fieldset>
+            <fieldset class="step">
+              <legend><b>2</b>How many days?<small>Drag to set</small></legend>
+              <div class="days">
+                <output id="days-out" for="days">7</output><span class="days__unit">days</span>
+                <input type="range" id="days" min="1" max="14" value="7" aria-label="Number of days">
+                <div class="days__scale" aria-hidden="true"><span>1</span><span>7</span><span>14</span></div>
+              </div>
+            </fieldset>
+            <fieldset class="step">
+              <legend><b>3</b>Who's coming?</legend>
+              <div class="pick pick--radio" data-group="party">
+                <label><input type="radio" name="party" value="Solo"><span>Solo</span></label>
+                <label><input type="radio" name="party" value="Couple" checked><span>Couple</span></label>
+                <label><input type="radio" name="party" value="Family"><span>Family</span></label>
+                <label><input type="radio" name="party" value="Group"><span>Group</span></label>
+              </div>
+            </fieldset>
+            <p class="builder__hint" id="builder-hint">Matches update as you choose.</p>
+          </form>
+
+          <div class="builder__results">
+            <div class="builder__results-head">
+              <p><b id="match-count">0</b> <span id="match-label">journeys match</span></p>
+              <button class="btn btn--gold btn--small" type="button" id="builder-send">Send to a trip planner →</button>
+            </div>
+            <ol class="matches" id="matches"></ol>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SERVICES ============ -->
+    <section class="services-sec on-dark" id="services" aria-labelledby="services-title">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <p class="label"><span>05</span>More than tours</p>
+            <h2 id="services-title">One desk for <em>the whole trip.</em></h2>
+          </div>
+          <p class="lead">Flights, visas, group logistics and the tour itself, all arranged by the same Kigali team. One WhatsApp thread, start to finish.</p>
+        </div>
+        <div class="bento">
+          <article class="bento__item bento__item--wide">
+            <span class="bento__no">01</span>
+            <h3>Custom trip planning</h3>
+            <p>Share your dates, budget and interests, and we'll design the trip around you, from a single day in Kigali to two weeks across the region.</p>
+            <button type="button" class="bento__link" data-interest="Custom trip">Start a custom trip →</button>
+            <svg class="bento__art" viewBox="0 0 200 120" aria-hidden="true"><path d="M10 100 C40 40, 80 110, 110 60 S170 20, 190 40" fill="none" stroke="currentColor" stroke-width="1.5" stroke-dasharray="4 6"/><circle cx="10" cy="100" r="5" fill="currentColor"/><circle cx="110" cy="60" r="4" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="190" cy="40" r="7" fill="currentColor"/></svg>
+          </article>
+          <article class="bento__item">
+            <span class="bento__no">02</span>
+            <h3>Air ticketing</h3>
+            <p>Domestic and international flights booked to match your tour dates.</p>
+            <button type="button" class="bento__link" data-interest="Air ticketing">Ask about flights →</button>
+          </article>
+          <article class="bento__item">
+            <span class="bento__no">03</span>
+            <h3>Visa assistance</h3>
+            <p>Guidance and support with visa applications for Rwanda and the region.</p>
+            <button type="button" class="bento__link" data-interest="Visa assistance">Ask about visas →</button>
+          </article>
+          <article class="bento__item bento__item--photo">
+            <figure class="media" data-scene="hills" data-seed="41"><img src="https://www.gamatour.agency/wp-content/uploads/2025/08/WhatsApp-Image-2025-08-02-at-12.59.12-AM.jpeg" alt="A Gama group on tour" loading="lazy" decoding="async"></figure>
+            <div class="bento__overlay">
+              <span class="bento__no">04</span>
+              <h3>Group tours</h3>
+              <p>Schools, churches, families and companies, from day trips to full programmes.</p>
+              <button type="button" class="bento__link" data-interest="Group tour">Plan a group trip →</button>
+            </div>
+          </article>
+          <article class="bento__item">
+            <span class="bento__no">05</span>
+            <h3>Night camping</h3>
+            <p>Camping nights at scenic spots across Rwanda, in the district you choose.</p>
+            <button type="button" class="bento__link" data-interest="Night camping">Ask about camping →</button>
+          </article>
+          <article class="bento__item">
+            <span class="bento__no">06</span>
+            <h3>Cross-border tours</h3>
+            <p>Itineraries continuing into Uganda, Kenya, Burundi and Tanzania.</p>
+            <button type="button" class="bento__link" data-interest="Cross-border tour">Go further →</button>
+          </article>
+        </div>
+        <p class="services-sec__foot">Gama also runs international academic tours and language &amp; tourism training programmes.</p>
+      </div>
+    </section>
+
+    <!-- ============ WHY ============ -->
+    <section class="why" id="why" aria-labelledby="why-title">
+      <div class="wrap why__grid">
+        <div class="why__stack" aria-hidden="true">
+          <figure class="media why__p1" data-scene="forest" data-seed="32"><img src="https://www.gamatour.agency/wp-content/uploads/2025/08/WhatsApp-Image-2025-08-14-at-8.36.53-AM-683x1024.jpeg" alt="" loading="lazy" decoding="async"></figure>
+          <figure class="media why__p2" data-scene="lake" data-seed="33"><img src="https://www.gamatour.agency/wp-content/uploads/2026/01/WhatsApp-Image-2026-01-25-at-4.27.30-PM-1024x768.jpeg" alt="" loading="lazy" decoding="async"></figure>
+          <div class="why__stamp"><svg viewBox="0 0 120 120"><defs><path id="stampCircle" d="M60 60 m-46 0 a46 46 0 1 1 92 0 a46 46 0 1 1 -92 0"/></defs><text><textPath href="#stampCircle" textLength="286" lengthAdjust="spacing">FROM HOME TO ANYWHERE · KIGALI · RWANDA ·</textPath></text></svg><span>RW</span></div>
+        </div>
+        <div>
+          <p class="label"><span>06</span>Why travel with Gama</p>
+          <h2 id="why-title">Local people. <em>Local knowledge.</em></h2>
+          <ol class="why__list">
+            <li><b>Based in Kigali.</b> A real office at ININDI House in Sonatube, and a team of locally trained tourism professionals who know the roads, the rangers and the weather.</li>
+            <li><b>Licensed and listed.</b> Registered with Rwanda Development Board tourism regulation and listed on SafariBookings, so you can check before you book.</li>
+            <li><b>Everything under one roof.</b> Flights, visas and the tour itself, with one point of contact from first message to the drive home.</li>
+            <li><b>Built for every kind of group.</b> Solo travellers, couples, families, schools, churches and companies.</li>
+          </ol>
+          <ul class="values" aria-label="Gama's core values">
+            <li>Community</li><li>Reliability</li><li>Empowerment</li><li>Sustainability</li><li>Excellence</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ GALLERY ============ -->
+    <section class="gallery-sec on-dark" aria-labelledby="gallery-title">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <p class="label"><span>07</span>On the road</p>
+            <h2 id="gallery-title">Real trips. <em>Real travellers.</em></h2>
+          </div>
+          <div class="gallery-sec__links">
+            <a class="btn btn--glass btn--small" href="https://www.instagram.com/gama_travel_tour_agency/" target="_blank" rel="noopener">Instagram ↗</a>
+            <a class="btn btn--glass btn--small" href="https://www.youtube.com/@GamaTravelAndTourAgency" target="_blank" rel="noopener">YouTube ↗</a>
+          </div>
+        </div>
+        <div class="mosaic" id="mosaic">
+          <button type="button" class="mosaic__item m1" aria-label="Open photo 1"><figure class="media" data-scene="hills" data-seed="31"><img src="https://www.gamatour.agency/wp-content/uploads/2025/08/WhatsApp-Image-2025-08-14-at-8.53.28-AM-1024x682.jpeg" alt="A moment from a Gama trip" loading="lazy" decoding="async"></figure></button>
+          <button type="button" class="mosaic__item m2" aria-label="Open photo 2"><figure class="media" data-scene="night" data-seed="34"><img src="https://www.gamatour.agency/wp-content/uploads/2026/03/WhatsApp-Image-2026-03-27-at-11.02.42-PM-1024x768.jpeg" alt="A moment from a Gama trip" loading="lazy" decoding="async"></figure></button>
+          <button type="button" class="mosaic__item m3" aria-label="Open photo 3"><figure class="media" data-scene="savanna" data-seed="35"><img src="https://www.gamatour.agency/wp-content/uploads/2025/09/WhatsApp-Image-2025-08-30-at-11.49.45-AM.jpeg" alt="A moment from a Gama trip" loading="lazy" decoding="async"></figure></button>
+          <button type="button" class="mosaic__item m4" aria-label="Open photo 4"><figure class="media" data-scene="volcano" data-seed="36"><img src="https://www.gamatour.agency/wp-content/uploads/2025/08/WhatsApp-Image-2025-08-14-at-8.41.53-AM-1024x682.jpeg" alt="A moment from a Gama trip" loading="lazy" decoding="async"></figure></button>
+          <button type="button" class="mosaic__item m5" aria-label="Open photo 5"><figure class="media" data-scene="city" data-seed="37"><img src="https://www.gamatour.agency/wp-content/uploads/2026/01/Visit-Rwanda-Ethnographic-Museum-1650x1097-1.jpg" alt="The Ethnographic Museum in Huye" loading="lazy" decoding="async"></figure></button>
+        </div>
+        <aside class="reviews-slot" aria-label="Traveller reviews (placeholder)">
+          <span class="tag">Placeholder</span>
+          <p><b>What travellers say.</b> Verified reviews from Gama's SafariBookings and Google profiles would stream in here, with name, trip and date, pulled live from the platform rather than written into the site.</p>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ============ PLAN ============ -->
+    <section class="plan-sec" id="plan" aria-labelledby="plan-title">
+      <div class="wrap plan">
+        <div class="plan__intro">
+          <p class="label"><span>08</span>Plan your trip</p>
+          <h2 id="plan-title">Tell us where.<br><em>We'll handle the rest.</em></h2>
+          <p class="lead">Share a few details and a Gama trip planner replies with ideas and a quote. Prefer to talk? Call or WhatsApp the Kigali office.</p>
+          <a class="wa-card" href="https://wa.me/250780367697" target="_blank" rel="noopener">
+            <span class="wa-card__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3a9 9 0 0 0-7.8 13.5L3 21l4.6-1.2A9 9 0 1 0 12 3Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg></span>
+            <span><b>WhatsApp the team</b><small>+250 780 367 697 · usually the fastest way</small></span>
+            <span aria-hidden="true">↗</span>
+          </a>
+          <ul class="contact-lines">
+            <li><span class="k">Call</span><span class="v"><span>+250 780 367 697</span><button class="copy-btn" type="button" data-copy="+250780367697">Copy</button></span></li>
+            <li><span class="k">Call</span><span class="v"><span>+250 788 872 060</span><button class="copy-btn" type="button" data-copy="+250788872060">Copy</button></span></li>
+            <li><span class="k">Email</span><span class="v tbc">Address to be confirmed by Gama</span></li>
+            <li><span class="k">Visit</span><span class="v">ININDI House, 3rd Floor, Sonatube, Kicukiro, Kigali</span></li>
+            <li><span class="k">Hours</span><span class="v">Mon–Fri, 9:00–17:00 · online enquiries any time</span></li>
+          </ul>
+        </div>
+
+        <form class="enquiry" novalidate aria-labelledby="enquiry-title">
+          <div class="enquiry__head">
+            <h3 id="enquiry-title">Tell us about your trip</h3>
+            <p>No payment needed. A trip planner replies with ideas and a quote.</p>
+          </div>
+          <div class="form-grid">
+            <div class="field">
+              <label for="plan-name">Full name</label>
+              <input id="plan-name" name="name" type="text" autocomplete="name" required aria-describedby="plan-name-error">
+              <p class="field-error" id="plan-name-error" aria-live="polite"></p>
+            </div>
+            <div class="field">
+              <label for="plan-email">Email</label>
+              <input id="plan-email" name="email" type="email" autocomplete="email" inputmode="email" required aria-describedby="plan-email-error">
+              <p class="field-error" id="plan-email-error" aria-live="polite"></p>
+            </div>
+            <div class="field">
+              <label for="plan-phone">Phone or WhatsApp <span class="opt">(optional)</span></label>
+              <input id="plan-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" aria-describedby="plan-phone-error">
+              <p class="field-error" id="plan-phone-error" aria-live="polite"></p>
+            </div>
+            <div class="field">
+              <label for="plan-travellers">Travellers</label>
+              <input id="plan-travellers" name="travellers" type="number" min="1" max="60" value="2" inputmode="numeric" required aria-describedby="plan-travellers-error">
+              <p class="field-error" id="plan-travellers-error" aria-live="polite"></p>
+            </div>
+            <div class="field field--full">
+              <label for="plan-interest">What are you interested in?</label>
+              <select id="plan-interest" name="interest" data-fill="interest"></select>
+            </div>
+            <div class="field field--full">
+              <label for="plan-month">When would you like to travel?</label>
+              <select id="plan-month" name="month" data-fill="months" required aria-describedby="plan-month-error"></select>
+              <p class="field-error" id="plan-month-error" aria-live="polite"></p>
+            </div>
+            <div class="field field--full">
+              <label for="plan-message">Anything we should know? <span class="opt">(optional)</span></label>
+              <textarea id="plan-message" name="message" rows="4" placeholder="Interests, budget, accessibility needs, celebrations…"></textarea>
+            </div>
+            <div class="field field--full">
+              <label class="check" for="plan-consent">
+                <input id="plan-consent" name="consent" type="checkbox" aria-describedby="plan-consent-error">
+                <span>Gama may contact me by email or phone about this enquiry.</span>
+              </label>
+              <p class="field-error" id="plan-consent-error" aria-live="polite"></p>
+            </div>
+          </div>
+          <div class="form-foot">
+            <button class="btn btn--gold btn--lg" type="submit">Send enquiry <span class="btn__arrow" aria-hidden="true">→</span></button>
+            <small>Prototype: the form checks your details but is not yet connected to Gama's inbox.</small>
+          </div>
+          <div class="form-status" role="status" tabindex="-1"></div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
     <div class="wrap">
-      <div class="section-head">
-        <div class="section-head__text">
-          <p class="eyebrow">On the road with Gama</p>
-          <h2 id="gallery-title">Real trips, real travellers.</h2>
+      <div class="footer-cta">
+        <p>Ready when you are.</p>
+        <a class="btn btn--gold btn--lg" href="#plan">Start planning <span class="btn__arrow" aria-hidden="true">→</span></a>
+      </div>
+      <div class="footer-top">
+        <div class="footer-brand">
+          <p>From home to anywhere. A Kigali-based agency for tours, safaris, group travel, air ticketing and visa support across Rwanda and East Africa.</p>
+          <p><a class="link-arrow" href="https://tourismregulation.rw/en/entity/profile/2081/" target="_blank" rel="noopener">Licensed by the Rwanda Development Board</a></p>
         </div>
-        <a class="btn btn--ghost btn--small" href="https://www.instagram.com/gama_travel_tour_agency/" target="_blank" rel="noopener">Follow on Instagram</a>
+        <div class="footer-col">
+          <h2>Journeys</h2>
+          <ul>
+            <li><a href="tours.html#primates">Gorillas &amp; primates</a></li>
+            <li><a href="tours.html#wildlife">Safari &amp; wildlife</a></li>
+            <li><a href="tours.html#lakes">Lakes &amp; nature</a></li>
+            <li><a href="tours.html#culture">Culture &amp; city</a></li>
+            <li><a href="tours.html#crossborder">Beyond Rwanda</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h2>Agency</h2>
+          <ul>
+            <li><a href="index.html#services">Air ticketing &amp; visas</a></li>
+            <li><a href="index.html#services">Group tours &amp; camping</a></li>
+            <li><a href="index.html#why">Why Gama</a></li>
+            <li><a href="index.html#plan">Plan your trip</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h2>Contact</h2>
+          <ul>
+            <li><a href="tel:+250780367697">+250 780 367 697</a></li>
+            <li><a href="tel:+250788872060">+250 788 872 060</a></li>
+            <li>ININDI House, 3rd Floor<br>Sonatube, Kicukiro, Kigali</li>
+          </ul>
+        </div>
       </div>
-      <div class="gallery">
-        <figure class="media g1" data-scene="hills" data-seed="31"><img src="https://www.gamatour.agency/wp-content/uploads/2025/08/WhatsApp-Image-2025-08-14-at-8.53.28-AM-1024x682.jpeg" alt="A moment from a Gama trip, from the agency's photo gallery" loading="lazy" decoding="async"></figure>
-<figure class="media g2" data-scene="forest" data-seed="32"><img src="https://www.gamatour.agency/wp-content/uploads/2025/08/WhatsApp-Image-2025-08-14-at-8.36.53-AM-683x1024.jpeg" alt="A moment from a Gama trip, from the agency's photo gallery" loading="lazy" decoding="async"></figure>
-<figure class="media g3" data-scene="lake" data-seed="33"><img src="https://www.gamatour.agency/wp-content/uploads/2026/01/WhatsApp-Image-2026-01-25-at-4.27.30-PM-1024x768.jpeg" alt="A moment from a Gama trip, from the agency's photo gallery" loading="lazy" decoding="async"></figure>
-<figure class="media g4" data-scene="night" data-seed="34"><img src="https://www.gamatour.agency/wp-content/uploads/2026/03/WhatsApp-Image-2026-03-27-at-11.02.42-PM-1024x768.jpeg" alt="A moment from a Gama trip, from the agency's photo gallery" loading="lazy" decoding="async"></figure>
-<figure class="media g5" data-scene="savanna" data-seed="35"><img src="https://www.gamatour.agency/wp-content/uploads/2025/09/WhatsApp-Image-2025-08-30-at-11.49.45-AM.jpeg" alt="A moment from a Gama trip, from the agency's photo gallery" loading="lazy" decoding="async"></figure>
-<figure class="media g6" data-scene="volcano" data-seed="36"><img src="https://www.gamatour.agency/wp-content/uploads/2025/08/WhatsApp-Image-2025-08-14-at-8.41.53-AM-1024x682.jpeg" alt="A moment from a Gama trip, from the agency's photo gallery" loading="lazy" decoding="async"></figure>
+      <div class="footer-word" aria-hidden="true">Gama</div>
+      <div class="footer-bottom">
+        <p>© <span data-year>2026</span> Gama Travel &amp; Tour Agency · Design concept</p>
+        <p class="social">
+          <a href="https://www.instagram.com/gama_travel_tour_agency/" target="_blank" rel="noopener">Instagram</a>
+          <a href="https://www.facebook.com/61579463322255/" target="_blank" rel="noopener">Facebook</a>
+          <a href="https://www.youtube.com/@GamaTravelAndTourAgency" target="_blank" rel="noopener">YouTube</a>
+          <a href="https://x.com/gamatourtravel" target="_blank" rel="noopener">X</a>
+          <a href="https://www.safaribookings.com/p8043" target="_blank" rel="noopener">SafariBookings</a>
+        </p>
       </div>
-      <div class="gallery__note"><span>Photos from Gama's own trips, as shared in the agency's gallery.</span><a href="https://www.youtube.com/@GamaTravelAndTourAgency" target="_blank" rel="noopener">Watch trips on YouTube</a></div>
     </div>
-  </section>
+  </footer>
 
-  <div class="imigongo imigongo--thin" role="presentation"></div>
-
-  <section class="section" id="plan" aria-labelledby="plan-title">
-    <div class="wrap plan">
-      <div class="plan__intro">
-        <p class="eyebrow">Plan your trip</p>
-        <h2 id="plan-title">Tell us where you'd like to go. We'll handle the rest.</h2>
-        <p class="lead">Share a few details and a Gama trip planner will reply with ideas and a quote. Prefer to talk? Call or WhatsApp the Kigali office.</p>
-        <ul class="contact-lines">
-          <li><span class="k">Call</span><span class="v"><span>+250 780 367 697</span><button class="copy-btn" type="button" data-copy="+250780367697">Copy</button></span></li>
-          <li><span class="k">Call</span><span class="v"><span>+250 788 872 060</span><button class="copy-btn" type="button" data-copy="+250788872060">Copy</button></span></li>
-          <li><span class="k">WhatsApp</span><span class="v"><a href="https://wa.me/250780367697" target="_blank" rel="noopener">Chat with the team</a></span></li>
-          <li><span class="k">Email</span><span class="v tbc">Address to be confirmed by Gama</span></li>
-          <li><span class="k">Visit</span><span class="v">ININDI House, 3rd Floor, Sonatube, Kicukiro, Kigali</span></li>
-        </ul>
-      </div>
-      <form class="enquiry" novalidate aria-labelledby="plan-title">
-    <div class="enquiry__head">
-      <p class="eyebrow">Enquiry</p>
-      <h3 id="plan-title">Tell us about your trip</h3>
-      <p>A Gama trip planner will reply with ideas and a quote.</p>
-    </div>
-    <div class="form-grid">
-      <div class="field">
-        <label for="plan-name">Full name</label>
-        <input id="plan-name" name="name" type="text" autocomplete="name" required aria-describedby="plan-name-error">
-        <p class="field-error" id="plan-name-error" aria-live="polite"></p>
-      </div>
-      <div class="field">
-        <label for="plan-email">Email</label>
-        <input id="plan-email" name="email" type="email" autocomplete="email" inputmode="email" required aria-describedby="plan-email-error">
-        <p class="field-error" id="plan-email-error" aria-live="polite"></p>
-      </div>
-      <div class="field">
-        <label for="plan-phone">Phone or WhatsApp <span class="opt">(optional)</span></label>
-        <input id="plan-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" aria-describedby="plan-phone-error">
-        <p class="field-error" id="plan-phone-error" aria-live="polite"></p>
-      </div>
-      <div class="field">
-        <label for="plan-travellers">Number of travellers</label>
-        <input id="plan-travellers" name="travellers" type="number" min="1" max="60" value="2" inputmode="numeric" required aria-describedby="plan-travellers-error">
-        <p class="field-error" id="plan-travellers-error" aria-live="polite"></p>
-      </div>
-      <div class="field field--full">
-        <label for="plan-interest">What are you interested in?</label>
-        <select id="plan-interest" name="interest" data-fill="interest"></select>
-      </div>
-      <div class="field field--full">
-        <label for="plan-month">When would you like to travel?</label>
-        <select id="plan-month" name="month" data-fill="months" required aria-describedby="plan-month-error"></select>
-        <p class="field-error" id="plan-month-error" aria-live="polite"></p>
-      </div>
-      <div class="field field--full">
-        <label for="plan-message">Anything we should know? <span class="opt">(optional)</span></label>
-        <textarea id="plan-message" name="message" rows="4" placeholder="Interests, budget, accessibility needs, celebrations…"></textarea>
-      </div>
-      <div class="field field--full">
-        <label class="check" for="plan-consent">
-          <input id="plan-consent" name="consent" type="checkbox" aria-describedby="plan-consent-error">
-          <span>Gama may contact me by email or phone about this enquiry.</span>
-        </label>
-        <p class="field-error" id="plan-consent-error" aria-live="polite"></p>
-      </div>
-    </div>
-    <div class="form-foot">
-      <button class="btn" type="submit">Send enquiry</button>
-      <small>Prototype: the form checks your details but is not yet connected to Gama's inbox.</small>
-    </div>
-    <div class="form-status" role="status" tabindex="-1"></div>
-  </form>
-    </div>
-  </section>
-</main>
-<footer class="site-footer">
-  <div class="wrap">
-    <div class="footer-top">
-      <div class="footer-brand">
-        <a class="brand" href="index.html" aria-label="Gama Travel &amp; Tour Agency, home">
-          <span class="brand__name">Gama</span>
-          <span class="brand__sub">Travel &amp; Tour Agency</span>
-        </a>
-        <p>From home to anywhere. A Kigali-based agency for tours, safaris, group travel, air ticketing and visa support across Rwanda and East Africa.</p>
-        <p><a class="link-arrow" href="https://tourismregulation.rw/en/entity/profile/2081/" target="_blank" rel="noopener">Licensed by the Rwanda Development Board</a></p>
-      </div>
-      <div class="footer-col">
-        <h2>Journeys</h2>
-        <ul>
-          <li><a href="tours.html#primates">Gorillas &amp; primates</a></li>
-          <li><a href="tours.html#wildlife">Safari &amp; wildlife</a></li>
-          <li><a href="tours.html#lakes">Lakes &amp; nature</a></li>
-          <li><a href="tours.html#culture">Culture &amp; city</a></li>
-          <li><a href="tours.html#crossborder">Beyond Rwanda</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h2>Agency</h2>
-        <ul>
-          <li><a href="index.html#services">Air ticketing &amp; visas</a></li>
-          <li><a href="index.html#services">Group tours &amp; camping</a></li>
-          <li><a href="index.html#why">Why Gama</a></li>
-          <li><a href="index.html#plan">Plan your trip</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h2>Contact</h2>
-        <ul>
-          <li>+250 780 367 697</li>
-          <li>+250 788 872 060</li>
-          <li>ININDI House, 3rd Floor<br>Sonatube, Kicukiro, Kigali</li>
-          <li>Mon–Fri, 9:00–17:00</li>
-        </ul>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <div class="socials">
-        <a href="https://www.instagram.com/gama_travel_tour_agency/" target="_blank" rel="noopener">Instagram</a>
-        <a href="https://www.facebook.com/61579463322255/" target="_blank" rel="noopener">Facebook</a>
-        <a href="https://www.youtube.com/@GamaTravelAndTourAgency" target="_blank" rel="noopener">YouTube</a>
-        <a href="https://x.com/gamatourtravel" target="_blank" rel="noopener">X</a>
-        <a href="https://www.safaribookings.com/p8043" target="_blank" rel="noopener">SafariBookings</a>
-      </div>
-      <span>© <span data-year>2026</span> Gama Travel &amp; Tour Agency</span>
-      <span class="concept-note">Redesign concept · not the live website</span>
-    </div>
+  <div class="lightbox" id="lightbox" hidden>
+    <button type="button" class="lightbox__close" aria-label="Close photo">×</button>
+    <div class="lightbox__stage"></div>
   </div>
-</footer>
 
-<script src="js/data.js"></script>
-<script src="js/scenes.js"></script>
-<script src="js/site.js"></script>
-<script src="js/home.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/scenes.js"></script>
+  <script src="js/site.js"></script>
+  <script src="js/home.js"></script>
 </body>
 </html>

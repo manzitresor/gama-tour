@@ -9,7 +9,14 @@
   function initHeader() {
     const header = $(".site-header");
     if (!header) return;
-    const onScroll = () => header.classList.toggle("is-solid", window.scrollY > 40);
+    let last = 0;
+    const onScroll = () => {
+      const y = window.scrollY;
+      header.classList.toggle("is-solid", y > 40);
+      if (y > 600 && y > last + 4 && !document.body.classList.contains("menu-open")) header.classList.add("is-hidden");
+      else if (y < last - 4 || y < 600) header.classList.remove("is-hidden");
+      last = y;
+    };
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
 
@@ -54,26 +61,54 @@
   /* ---------- Tour cards ---------- */
   const catLabel = (id) => CATEGORIES.find((c) => c.id === id)?.label ?? id;
 
+  const pad = (n) => String(n).padStart(2, "0");
+
   function tourCard(t, opts = {}) {
     const href = `tour.html#${t.slug}`;
     const tag = t.country === "Rwanda" ? catLabel(t.categories[0]) : `Beyond Rwanda · ${t.country}`;
+    const days = t.days ? `<span class="tour-card__days"><b>${pad(t.days)}</b>${t.days === 1 ? "day" : "days"}</span>` : "";
     return `
       <article class="tour-card ${opts.cls || ""}" data-slug="${t.slug}">
         <a class="tour-card__media" href="${href}" tabindex="-1" aria-hidden="true">
           ${media(t.image, "", t.scene, t.seed)}
-          <span class="tour-card__duration">${esc(t.durationLabel)}</span>
+          ${days}
+          <span class="tour-card__go" aria-hidden="true">↗</span>
         </a>
         <div class="tour-card__body">
-          <p class="eyebrow">${esc(tag)}</p>
+          <p class="tour-card__tag">${esc(tag)}</p>
           <h3 class="tour-card__title"><a href="${href}">${esc(t.title)}</a></h3>
           <p class="tour-card__text">${esc(t.short)}</p>
-          <p class="tour-card__meta"><span>${esc(t.region)}</span></p>
-          <div class="tour-card__actions">
-            <a class="link-arrow" href="${href}">View tour</a>
-            <a class="link-quiet" href="${href}-enquire">Enquire</a>
-          </div>
+          <p class="tour-card__meta"><span>${esc(t.region.split(" · ")[0])}</span><span>${esc(t.durationLabel)}</span>${t.price ? `<span class="tour-card__price">${esc(t.price.replace(", based on 2 sharing", ""))}</span>` : ""}</p>
         </div>
       </article>`;
+  }
+
+  /* ---------- Topographic contour art (the "thousand hills" motif) ---------- */
+  function drawContours(root = document) {
+    $$("svg[data-contours]", root).forEach((svg) => {
+      const n = +svg.dataset.contours || 12, W = 1600, H = 1000;
+      svg.setAttribute("viewBox", `0 0 ${W} ${H}`);
+      svg.setAttribute("preserveAspectRatio", "xMidYMid slice");
+      let seed = n * 7 + 3;
+      const r = () => ((seed = (seed * 9301 + 49297) % 233280) / 233280);
+      const centres = [[W * 0.72, H * 0.38], [W * 0.18, H * 0.82]];
+      let d = "";
+      centres.forEach(([cx, cy], ci) => {
+        const ph = [r() * 6.28, r() * 6.28, r() * 6.28];
+        for (let i = 1; i <= n; i++) {
+          const R = i * (ci ? 46 : 58);
+          let p = "";
+          for (let a = 0; a <= 64; a++) {
+            const th = (a / 64) * Math.PI * 2;
+            const k = 1 + 0.16 * Math.sin(3 * th + ph[0] + i * 0.15) + 0.09 * Math.sin(5 * th + ph[1]) + 0.05 * Math.sin(8 * th + ph[2] + i * 0.3);
+            const x = cx + Math.cos(th) * R * k * 1.25, y = cy + Math.sin(th) * R * k * 0.85;
+            p += (a ? "L" : "M") + x.toFixed(1) + " " + y.toFixed(1);
+          }
+          d += p + "Z";
+        }
+      });
+      svg.innerHTML = `<path d="${d}" fill="none" stroke="currentColor" stroke-width="1" vector-effect="non-scaling-stroke"/>`;
+    });
   }
 
   /* ---------- Enquiry forms ---------- */
@@ -189,10 +224,21 @@
     });
   }
 
-  window.GamaUI = { $, $$, esc, media, tourCard, hydrateMedia, catLabel, fillSelects };
+  /* ---------- Kigali clock (Africa/Kigali, UTC+2) ---------- */
+  function initClock() {
+    const els = $$("[data-kigali-time]");
+    if (!els.length) return;
+    const fmt = new Intl.DateTimeFormat("en-GB", { hour: "2-digit", minute: "2-digit", timeZone: "Africa/Kigali" });
+    const tick = () => els.forEach((el) => (el.textContent = fmt.format(new Date())));
+    tick(); setInterval(tick, 20000);
+  }
+
+  window.GamaUI = { $, $$, esc, media, tourCard, hydrateMedia, catLabel, fillSelects, drawContours, pad };
 
   document.addEventListener("DOMContentLoaded", () => {
     fillSelects();
+    drawContours();
+    initClock();
     initHeader();
     initForms();
     initCopy();
