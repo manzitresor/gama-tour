@@ -5,5 +5,7 @@
   "assets": {
     "directory": "./",
     "not_found_handling": "404-page"
-  }
+  },
+  // Required by `npx wrangler preview`, which Workers Builds runs for non-production branches.
+  "previews": {}
 }
