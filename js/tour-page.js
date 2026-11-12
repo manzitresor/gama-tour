@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
     $('meta[name="description"]')?.setAttribute("content", `${t.short} ${t.durationLabel}. Enquire with Gama Travel & Tour Agency, Kigali.`);
 
     $("#tour-hero-media").innerHTML = media(t.image, t.title, t.scene, t.seed, "", true);
-    $("#tour-hero-media").firstElementChild.style.cssText = "position:absolute;inset:0;z-index:-1";
+    $("#tour-hero-media").firstElementChild.style.cssText = "position:absolute;inset:0;z-index:-2";
     $("#crumb-current").textContent = t.title;
     $("#tour-region").textContent = t.region;
     $("#tour-title").textContent = t.title;
